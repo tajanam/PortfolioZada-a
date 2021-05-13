@@ -12,7 +12,15 @@ def aboutme():
 
 @app.route("/contact", methods=["POST"])
 def contact():
+    contact_name = request.form.get("contact-name")
+    contact_email = request.form.get("contact-email")
+    contact_msg = request.form.get("contact-msg")
 
+    print(contact_name)
+    print(contact_email)
+    print(contact_msg)
+
+    return render_template("success.html")
 
 
 
